@@ -9,7 +9,12 @@ import {
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { NormalTable, PageCard, CustomLoading } from '../../Components';
+import {
+  NormalTable,
+  PageCard,
+  CustomLoading,
+  CustomPagination,
+} from '../../Components';
 import { ChangeDate } from '../../Helper/ChangeDate';
 import { CustomGetFunction } from '../../services';
 import { PostMethod } from '../../services/api-services';
@@ -29,11 +34,11 @@ const columns = [
 const Deposite = () => {
   const [num, setNum] = useState(0);
   const [filterStatus, setFilterStatus] = useState('');
-  const type = localStorage.getItem('type');
+  // const type = localStorage.getItem('type');
   const [page, setPage] = useState(1);
   const [value, setValue] = useState('');
   const [ID, setID] = useState(null);
-  const { data, loading } = CustomGetFunction(
+  const { data, loading, pagination } = CustomGetFunction(
     `api/deposit-receive?sortColumn=id&sortDirection=desc&limit=20&page=${page}${filterStatus}`,
     [num, page, filterStatus]
   );
@@ -171,6 +176,13 @@ const Deposite = () => {
         </NormalTable>
       ) : (
         <CustomLoading />
+      )}
+
+      {data.length !== 0 && (
+        <CustomPagination
+          setPage={setPage}
+          totalPage={pagination?.meta?.last_page}
+        />
       )}
     </PageCard>
   );

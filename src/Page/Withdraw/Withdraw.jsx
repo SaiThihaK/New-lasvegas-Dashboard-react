@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import classes from './Withdraw.module.css';
-import { Button, FormControl, MenuItem, Select, Stack } from '@mui/material';
+import { Button, FormControl, MenuItem, Select } from '@mui/material';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { CustomPagination, NormalTable, PageCard } from '../../Components';
@@ -12,53 +12,53 @@ import { useSelector } from 'react-redux';
 import { PostMethod } from '../../services/api-services';
 import { ChangeDate } from '../../Helper/ChangeDate';
 
-const UserWithDrawTable = ({}) => {
-  const [open, setOpen] = useState(false);
-  const [cancelopen, setCancelOpen] = useState(false);
+const UserWithDrawTable = () => {
+  // const [open, setOpen] = useState(false);
+  // const [cancelopen, setCancelOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [agent_action, setAgent_action] = useState('');
 
-  const openHandler = () => setOpen(true);
-  const closeHandler = () => setOpen(false);
-  const CancelopenHandler = () => setCancelOpen(true);
-  const CancelcloseHandler = () => setCancelOpen(false);
-  const [userWithDraw, setUserWithDraw] = useState([]);
+  // const openHandler = () => setOpen(true);
+  // const closeHandler = () => setOpen(false);
+  // const CancelopenHandler = () => setCancelOpen(true);
+  // const CancelcloseHandler = () => setCancelOpen(false);
+  // const [userWithDraw, setUserWithDraw] = useState([]);
   const [id, setId] = useState(0);
   const [num, setNum] = useState(0);
   const userData = useSelector(userInfo);
-  const [remark, setRemark] = useState('');
-  const [openModal, setOpenModal] = useState(false);
-  const { data, loading, pagination } = CustomGetFunction(
+  // const [remark, setRemark] = useState('');
+  // const [openModal, setOpenModal] = useState(false);
+  const { data, pagination } = CustomGetFunction(
     `api/user-withdraw?sortDirection=desc&receiver_user_id=${userData.id}&page=${page}`,
     [page, num]
   );
   console.log(data);
   const [userId, setUserId] = useState('');
-  const handleClose = () => {
-    setOpenModal(false);
-  };
+  // const handleClose = () => {
+  //   setOpenModal(false);
+  // };
 
   // console.log("userWithdraw", data);
-  const submitHandler = async (id) => {
-    setOpenModal(false);
-    if (agent_action === 0) {
-      try {
-        const response = await axios.request(
-          PostMethod(`api/agent/user-withdraw/action/rejected/${id}`, {
-            remark,
-          })
-        );
-        if (response.data.status === 'success') {
-          toast.success(response.data.message);
-          setNum(num + 1);
-          setId(0);
-          return;
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  };
+  // const submitHandler = async (id) => {
+  //   // setOpenModal(false);
+  //   if (agent_action === 0) {
+  //     try {
+  //       const response = await axios.request(
+  //         PostMethod(`api/agent/user-withdraw/action/rejected/${id}`, {
+  //           // remark,
+  //         })
+  //       );
+  //       if (response.data.status === 'success') {
+  //         toast.success(response.data.message);
+  //         setNum(num + 1);
+  //         setId(0);
+  //         return;
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  // };
   const confirmHandler = async (id) => {
     setUserId(id);
     if (agent_action === 1) {
@@ -77,7 +77,7 @@ const UserWithDrawTable = ({}) => {
         console.log(error);
       }
     }
-    setOpenModal(true);
+    // setOpenModal(true);
   };
   useEffect(() => {}, [userId]);
 

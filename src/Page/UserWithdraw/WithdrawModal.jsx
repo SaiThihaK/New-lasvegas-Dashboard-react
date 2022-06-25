@@ -10,7 +10,7 @@ import Loading from '../../Components/Loading/Loading';
 import { logoutHandler } from '../../Helper/LogoutHandler';
 import { ltoken } from '../../services/Token';
 const WithdrawModal = ({ ModalHandler, datas, tags }) => {
-  const [paymentAccount, setPaymentAccount] = useState('');
+  // const [paymentAccount, setPaymentAccount] = useState('');
 
   const [validationError, setValidationError] = useState('');
   const [submitLoading, setSubmitLoading] = useState(false);
@@ -110,7 +110,7 @@ const WithdrawModal = ({ ModalHandler, datas, tags }) => {
           </div>
           <div className='k-card-d'>
             <p className='k-card-text'>
-              {paymentAccount.payment_provider} Account Name
+              {datas?.payment_provider} Account Name
             </p>
             <div>
               <input

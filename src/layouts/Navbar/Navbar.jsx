@@ -28,10 +28,7 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const { data: userData, loading } = CustomGetFunction(
-    `api/get-login-user`,
-    []
-  );
+  const { data: userData } = CustomGetFunction(`api/get-login-user`, []);
   console.log(userData);
   return (
     <IconContext.Provider value={{ color: '#FFF' }}>
