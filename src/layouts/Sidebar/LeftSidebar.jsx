@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Avatar, Box } from "@mui/material";
 import { LeftSidebarData } from "./LeftSidebarData";
 import LeftSidebarMenu from "./LeftSidebarMenu";
-import { Link } from "react-router-dom";
+
 
 
 const LeftSidebar = () => {
