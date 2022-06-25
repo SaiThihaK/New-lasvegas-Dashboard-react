@@ -65,7 +65,7 @@ export default function SelectCoun({ country, setCountry }) {
   };
 
   console.log('coun', country);
-  const newArr = country.map((c) => c.id);
+  // const newArr = country.map((c) => c.id);
 
   return (
     <div style={{ marginTop: 20 }}>
