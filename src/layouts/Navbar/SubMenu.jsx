@@ -1,14 +1,16 @@
 import React, { useState, Fragment } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import classes from './SubMenu.module.css';
 const Submenu = ({ item }) => {
   //assigning location variable
-  const location = useLocation();
+  // const location = useLocation();
   //destructuring pathname from location
-  const { pathname } = location;
+  // const { pathname } = location;
   //Javascript split method to get the name of the path in array
-  const splitLocation = pathname.split('/');
+
+  // const splitLocation = pathname.split('/');
+
   //active class add
   // className={splitLocation[1] === "" ? "active" : ""}
 
