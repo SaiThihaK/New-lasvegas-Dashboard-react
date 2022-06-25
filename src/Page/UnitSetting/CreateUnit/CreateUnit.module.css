@@ -1,0 +1,10 @@
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-margin{
+    padding:10;
+}

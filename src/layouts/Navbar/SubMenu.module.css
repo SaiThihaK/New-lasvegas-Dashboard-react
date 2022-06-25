@@ -1,0 +1,42 @@
+.menuItem {
+    display: flex;
+    color: #202122;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.menuItem:hover {
+   background-color: #e8eff4;
+   border-left: 4px solid #632ce4;
+   cursor: pointer;
+}
+.sidebarLabel,.subbarLabel {
+ margin-left: 16px;
+ font-size: 15px;
+ color: black;
+}
+.sub-list {
+    background-color: white;
+    /* height: 60px; */
+    padding: 20px 20px 20px 2.3rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    transition: 0.3s;
+}
+.sub-list:hover {
+    background-color: #e8eff4;
+    cursor: pointer;
+}
+.active {
+    border-left: 4px solid #632ce4;
+}
+.MuiSvgIcon-root{
+    fill: white;
+}

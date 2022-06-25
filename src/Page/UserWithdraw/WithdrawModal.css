@@ -1,0 +1,196 @@
+.kpayImg {
+    display: block;
+    margin: auto;
+}
+
+.kInp:focus {
+    background-color: #fff;
+    opacity: 1 !important;
+}
+
+.disable-submit {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}
+
+.k-card {
+    width: 550px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #EDEDED;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.MuiTooltip-popper {
+    z-index: 9999999 !important;
+}
+
+.k-card-d {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.k-card-d p {
+    margin-bottom: 5px;
+}
+
+.k-card-header {
+    background-color: white;
+    padding: 20px;
+}
+
+.k-card-header img {
+    height: 50px;
+}
+
+/* Card body */
+.k-card-body {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 20px 10px;
+
+}
+
+.k-body {
+    padding: 20px 20px !important;
+}
+
+.k-card-text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.k-amount-text {
+    color: #1c1e20;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.k-code-text {
+    color: #1d3a59;
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.k-card-text {
+    color: #1c1e20;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.kInp {
+    width: 320px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+    border-top: 1px solid #a09d9d;
+    border-left: 1px solid #a09d9d;
+    opacity: 0.7;
+    text-align: center;
+
+}
+
+
+
+.k-danger-text {
+    color: #ff4d4d;
+    font-size: 15px;
+}
+
+.wave-message-txt {
+    /* font-size: 13px  !important; */
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.k-icn {
+    font-size: 18px;
+    color: rgb(66, 201, 25);
+    margin-left: 7px;
+}
+
+.k-long-para {
+    color: #1d3a59;
+    margin: 20px 0;
+}
+
+.wave-ftxt {
+    color: #29598b;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.k-confirm-button {
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    outline: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.k-confirm-button:hover {
+    background-color: rgb(111, 1, 1);
+}
+
+.error {
+    color: red;
+    text-align: center;
+    display: block;
+}
+
+.qicn {
+    font-size: 20px;
+    margin-left: 8px;
+    color: #777;
+}
+
+.bank-backdrop {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.445);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    transition: 0.3s;
+}
+
+.Copy {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.copy-text {
+    font-size: 0.8rem;
+}
