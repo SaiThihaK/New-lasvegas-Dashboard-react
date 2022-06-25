@@ -1,12 +1,8 @@
-import React from 'react'
-import { NormalTable, PageCard } from '../../../Components'
+import React from 'react';
+import { PageCard } from '../../../Components';
 
 const ThreeDList = () => {
-  return (
-    <PageCard>
-        {/* <NormalTable></NormalTable> */}
-    </PageCard>
-  )
-}
+  return <PageCard>{/* <NormalTable></NormalTable> */}</PageCard>;
+};
 
-export default ThreeDList
+export default ThreeDList;
