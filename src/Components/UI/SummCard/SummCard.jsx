@@ -1,21 +1,21 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-import { makeStyles } from '@mui/styles';
+// import { makeStyles } from '@mui/styles';
 import PeopleIcon from '@mui/icons-material/People';
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles({
-  hover: {
-    '&:hover': {
-      transform: 'scale(1.1)',
-      transition: 'all .5s ease-out',
-    },
-  },
-  hovertwo: {
-    transition: 'all .5s ease-out',
-  },
-});
+// const useStyles = makeStyles({
+//   hover: {
+//     '&:hover': {
+//       transform: 'scale(1.1)',
+//       transition: 'all .5s ease-out',
+//     },
+//   },
+//   hovertwo: {
+//     transition: 'all .5s ease-out',
+//   },
+// });
 const SummCard = () => {
   // const classes = useStyles();
   const DateBox = [
