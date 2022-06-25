@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import React, { lazy, useState } from 'react';
 import { PageCard, UnitValueModal } from '../../../Components';
 import { CustomGetFunction } from '../../../services';
@@ -14,7 +14,7 @@ const UnitValue = () => {
   const [id, setId] = useState('');
   const [createOpen, setCreateOpen] = useState(false);
   const createOpenHandler = () => setCreateOpen(true);
-  const createCloseHandler = () => setCreateOpen(false);
+  // const createCloseHandler = () => setCreateOpen(false);
   const [render, setRender] = useState(false);
   const { data: countries } = CustomGetFunction(
     `api/available-regions?sortColumn=country_name&sortDirection=asc`,

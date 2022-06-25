@@ -13,17 +13,17 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SelectCoun from './SelectCoun';
 import CustomGetFunction from '../../../services/CustomGetFunction';
-import { getMethod, PostProvider } from '../../../services/api-services';
+import { PostProvider } from '../../../services/api-services';
 import { logoutHandler } from '../../../Helper/LogoutHandler';
 import { PageCard } from '../../../Components';
 
 const CreatePaymentProvider = () => {
-  const [payment_type, setPayment_type] = useState([]);
+  // const [payment_type, setPayment_type] = useState([]);
   const [payment_provider, setPayment_provider] = useState('');
   const [payment_typeValue, setPayment_typeValue] = useState('');
   const [logo, setlogo] = useState({});
   const [country, setCountry] = useState([]);
-  const [coun, setCoun] = useState([]);
+  // const [coun, setCoun] = useState([]);
   const navigate = useNavigate();
 
   const payment_typeChange = (e) => setPayment_typeValue(e.target.value);
@@ -31,33 +31,33 @@ const CreatePaymentProvider = () => {
   const logoChange = (e) => setlogo(e.target.files[0]);
 
   const { data } = CustomGetFunction(`api/dashboard/payment-types`, []);
-  const FetchPayment_type = async () => {
-    try {
-      const response = await axios.request(
-        getMethod(`api/dashboard/payment-types`)
-      );
-      if (response.data.status === 'success') {
-        setPayment_type(response.data.data);
-        return;
-      }
-    } catch (error) {
-      console.log(error);
-      console.log(error.response.data.message);
-      if (
-        error.response.status === 401 ||
-        error.response.data.message === 'Unauthenticated.'
-      ) {
-        logoutHandler();
-      }
-    }
-  };
+  // const FetchPayment_type = async () => {
+  //   try {
+  //     const response = await axios.request(
+  //       getMethod(`api/dashboard/payment-types`)
+  //     );
+  //     if (response.data.status === 'success') {
+  //       setPayment_type(response.data.data);
+  //       return;
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //     console.log(error.response.data.message);
+  //     if (
+  //       error.response.status === 401 ||
+  //       error.response.data.message === 'Unauthenticated.'
+  //     ) {
+  //       logoutHandler();
+  //     }
+  //   }
+  // };
   const AlertToast = (toast, msg) => {
     return toast(msg);
   };
 
   useEffect(() => {
-    FetchPayment_type();
-    return () => setPayment_type([]);
+    // FetchPayment_type();
+    // return () => setPayment_type([]);
   }, []);
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -98,15 +98,15 @@ const CreatePaymentProvider = () => {
     }
   };
 
-  const fetchCountries = async () => {
-    axios.request(getMethod(`api/countries`)).then(function (response) {
-      setCoun(response.data.data);
-    });
-  };
+  // const fetchCountries = async () => {
+  //   axios.request(getMethod(`api/countries`)).then(function (response) {
+  //     setCoun(response.data.data);
+  //   });
+  // };
 
-  useEffect(() => {
-    fetchCountries();
-  }, []);
+  // useEffect(() => {
+  //   fetchCountries();
+  // }, []);
 
   return (
     <div className={classes['soccer-setting-container']}>

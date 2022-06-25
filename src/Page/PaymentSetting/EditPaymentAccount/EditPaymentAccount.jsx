@@ -12,17 +12,16 @@ import { logoutHandler } from '../../../Helper/LogoutHandler';
 import { PostMethod } from '../../../services/api-services';
 import { CustomGetFunction } from '../../../services';
 
-
 const EditPaymentAccount = () => {
   const { id } = useParams();
-  const [logo, setlogo] = useState('');
+  // const [logo, setlogo] = useState('');
   const [name, setName] = useState('');
   const [account, setAccount] = useState('');
   const nameChange = (e) => setName(e.target.value);
   const accountChange = (e) => setAccount(e.target.value);
   const navigate = useNavigate();
 
-  const logoChange = (e) => setlogo(e.target.files[0]);
+  // const logoChange = (e) => setlogo(e.target.files[0]);
 
   const { data: paymentAccountDetail, loading } = CustomGetFunction(
     `api/dashboard/payment-accounts/${id}`,
@@ -113,7 +112,7 @@ const EditPaymentAccount = () => {
               Edit
             </Button>
           </div>
-          </>
+        </>
       ) : (
         <CustomLoading />
       )}
